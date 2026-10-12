@@ -1,3 +1,49 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.projects {
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto 0;
+}
+
+.projects h2 {
+    margin-bottom: 1rem;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card p {
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1.5rem 1rem;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
 }
