@@ -1,32 +1,124 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UC Web</title>
+    <meta name="description" content="蕭宇呈的個人作品集，聚焦電機工程、AIoT、訊號處理、嵌入式系統與耐力運動。">
+    <title>蕭宇呈 Yu-Cheng Hsiao | 個人作品集</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Hello, I'm UC！網站部署成功 🎉</h1>
-    <p>1151 網站前端技術應用</p>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="主要導覽">
+            <a class="brand" href="#top" aria-label="回到頁面頂端">YC.</a>
+            <div class="nav-tools">
+                <div class="nav-links">
+                    <a href="#about">關於</a>
+                    <a href="#projects">專案</a>
+                    <a href="#journey">經歷</a>
+                    <a href="#skills">技能</a>
+                    <a href="#beyond">運動</a>
+                    <a href="#contact">聯絡</a>
+                </div>
+                <div class="language-switcher" aria-label="語言切換">
+                    <a class="active" href="index.html" aria-current="page">中</a>
+                    <a href="en.html">EN</a>
+                    <a href="ja.html">日本語</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <section class="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">作品介紹</h2>
+    <main id="top">
+        <section class="hero section container" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <p class="eyebrow">個人作品集 / 01</p>
+                <h1 id="hero-title">YU-CHENG<br><span>HSIAO</span></h1>
+                <p class="hero-subtitle">電機工程<br>AIoT · 訊號處理 · 嵌入式系統</p>
+                <p class="hero-copy">從訊號處理、AIoT 到嵌入式系統，<br>我喜歡把理論真正做成能運作的系統。</p>
+                <p class="hero-motto">Build. Learn. Keep Moving.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">查看專案 <span aria-hidden="true">↗</span></a>
+                    <a class="button button-secondary" href="#about">關於我</a>
+                </div>
+            </div>
+            <aside class="hero-focus" aria-label="目前關注領域">
+                <p class="eyebrow">FOCUS</p>
+                <ul><li>AIoT</li><li>Signal Processing</li><li>Embedded Systems</li></ul>
+                <span class="focus-index">01 — 03</span>
+            </aside>
+        </section>
 
-        <div class="project-list">
-            <article class="project-card">
-                <h3>個人介紹網頁</h3>
-                <p>使用 HTML 與 CSS 製作個人介紹頁面，整理自我介紹、學習興趣與技能內容。</p>
-            </article>
+        <section id="about" class="section container" aria-labelledby="about-title">
+            <div class="section-heading"><p class="eyebrow">01 / 個人簡介</p><h2 id="about-title">關於我</h2></div>
+            <div class="about-layout">
+                <p class="about-intro">具備電機工程背景，喜歡透過實作理解技術。<br>從 AIoT、通訊系統、訊號處理到嵌入式系統，<br>持續透過專題、國際交流與實驗累積系統整合經驗。</p>
+                <div class="about-cards">
+                    <article class="info-card"><span class="card-number">01</span><h3>工程實作</h3><p>電機工程、系統整合與軟硬體實作</p></article>
+                    <article class="info-card"><span class="card-number">02</span><h3>國際探索</h3><p>國際營隊、日本研究實習與跨文化學習</p></article>
+                    <article class="info-card"><span class="card-number">03</span><h3>持續挑戰</h3><p>馬拉松、鐵人三項與競技訓練，透過長期訓練培養紀律、自我管理與持續突破。</p></article>
+                </div>
+            </div>
+        </section>
 
-            <article class="project-card">
-                <h3>Profile Card 練習</h3>
-                <p>練習使用 HTML 與 CSS 建立個人資料卡片，並透過 Git 分支完成版本管理。</p>
-            </article>
-        </div>
-    </section>
+        <section id="projects" class="section container" aria-labelledby="projects-title">
+            <div class="section-heading section-heading-row"><div><p class="eyebrow">02 / 精選作品</p><h2 id="projects-title">主要專案</h2></div><p class="section-note">以好奇心、實驗與迭代，<br>把系統一步步做出來。</p></div>
+            <div class="project-grid">
+                <article class="project-card project-card-featured">
+                    <div class="project-card-top"><span>01</span><span>AIoT / SYSTEM</span></div>
+                    <h3>AIoT 智慧路口<br>風險預警系統</h3>
+                    <p>系統使用車輛行為辨識技術，整合蛇行與方向燈辨識，建立從偵測端、Firebase Topic 與推播到行人端 App 的資料流程，完成偵測、事件傳送與使用者警示的系統整合。</p>
+                    <div class="tag-list" aria-label="專案技術"><span>AIoT</span><span>Computer Vision</span><span>Firebase</span><span>App</span></div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-top"><span>02</span><span>RESEARCH / ANC</span></div>
+                    <h3>主動式噪音控制<br>關西大學</h3>
+                    <p>於日本關西大學進行 ANC 模擬與實作，比較 Feedforward、Feedback 與 Hybrid 架構在不同噪音環境下的降噪特性，使用 FXLMS 與 MATLAB 進行訊號處理分析。</p>
+                    <div class="tag-list" aria-label="專案技術"><span>ANC</span><span>Signal Processing</span><span>FXLMS</span><span>MATLAB</span></div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-top"><span>03</span><span>COMMUNICATION / UI</span></div>
+                    <h3>QPSK 互動式<br>模擬系統</h3>
+                    <p>使用 GNU Radio、PyQt5 與 Qt Designer 建立互動式 QPSK 模擬介面，可即時調整 SNR、Frequency Offset、Timing Offset，並觀察星座圖與訊號變化。</p>
+                    <div class="tag-list" aria-label="專案技術"><span>QPSK</span><span>GNU Radio</span><span>Python</span><span>PyQt5</span></div>
+                </article>
+            </div>
+        </section>
 
+        <section id="journey" class="section container" aria-labelledby="journey-title">
+            <div class="section-heading"><p class="eyebrow">03 / 發展軌跡</p><h2 id="journey-title">經歷</h2></div>
+            <div class="timeline">
+                <article class="timeline-item"><p class="timeline-year">2024</p><div><h3>CYCU EECS Summer Camp</h3><p>Active Noise Control / FXLMS<br>Gold Medal Award</p></div></article>
+                <article class="timeline-item"><p class="timeline-year">2024</p><div><h3>日本關西大學</h3><p>Active Noise Control Research</p></div></article>
+                <article class="timeline-item"><p class="timeline-year">2025</p><div><h3>AIoT 智慧路口風險預警系統</h3><p>Computer Vision × Firebase × App</p></div></article>
+                <article class="timeline-item"><p class="timeline-year">2026</p><div><h3>研究所／研究</h3><p>持續在電機工程領域學習與研究</p></div></article>
+            </div>
+        </section>
+
+        <section id="skills" class="section container" aria-labelledby="skills-title">
+            <div class="section-heading"><p class="eyebrow">04 / 技術工具</p><h2 id="skills-title">技能</h2></div>
+            <div class="skills-list" aria-label="技術技能"><span>Python</span><span>C</span><span>MATLAB</span><span>GNU Radio</span><span>PyQt5</span><span>Firebase</span><span>Git / GitHub</span><span>Embedded Systems</span><span>Computer Vision</span><span>Signal Processing</span></div>
+        </section>
+
+        <section id="beyond" class="section container athlete-section" aria-labelledby="athlete-title">
+            <div class="athlete-layout">
+                <div class="athlete-intro"><p class="eyebrow">05 / 耐力運動</p><h2 id="athlete-title">耐力<br>運動員</h2><p class="athlete-subtitle">馬拉松 · 鐵人三項 · 持續前進。</p><div class="athlete-principle"><p>工程讓我學會拆解問題，<br>耐力運動讓我學會在長期目標中持續前進。</p><p>長距離跑步與鐵人三項不只是興趣，<br>也是我訓練紀律、自我管理與面對壓力的方式。</p></div><blockquote>Engineering teaches me how to solve problems.<br>Running teaches me how to keep going.</blockquote></div>
+                <div class="achievement-area"><p class="achievement-label">代表性成果</p><div class="achievement-grid">
+                    <article class="achievement-card"><span class="achievement-number">01</span><strong>1ST</strong><h3>Challenge Taiwan 113K</h3><p>2026 · 分組第一名</p></article>
+                    <article class="achievement-card"><span class="achievement-number">02</span><strong>4TH</strong><h3>萬金石馬拉松</h3><p>2026 · 分組第四名</p></article>
+                    <article class="achievement-card"><span class="achievement-number">03</span><strong>SPONSORED<br>ATHLETE</strong><h3>運動贊助選手經驗</h3><p>馬拉松 / 鐵人三項</p></article>
+                </div></div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section container" aria-labelledby="contact-title">
+            <p class="eyebrow">06 / 保持聯繫</p><h2 id="contact-title">聯絡</h2><p>如果你對工程、研究、<br>科技與新的挑戰感興趣，歡迎交流。</p>
+            <div class="contact-links"><a href="#">GitHub <span aria-hidden="true">↗</span></a><a href="#">Email <span aria-hidden="true">↗</span></a></div>
+        </section>
+    </main>
+
+    <footer class="site-footer container"><p>© Yu-Cheng Hsiao</p><p>Build. Learn. Keep Moving.</p></footer>
     <script src="script.js"></script>
 </body>
 </html>
